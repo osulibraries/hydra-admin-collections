@@ -1,7 +1,7 @@
 module Hydra::Admin::Collections::Metadata
   extend ActiveSupport::Concern
   included do
-    contains 'descMetadata', type: ActiveFedora::SimpleDatastream do |sds|
+    contains 'descMetadata', predicate: ActiveFedora::SimpleDatastream do |sds|
       sds.field :name, :string
       sds.field :description, :string
       sds.field :publisher, :string
