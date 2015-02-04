@@ -1,7 +1,6 @@
 module Hydra::Admin::Collections::Metadata
   extend ActiveSupport::Concern
   included do
-     # In place of :name?
     property :title, predicate: RDF::DC.title, multiple: false do |index|
       index.as :stored_searchable
     end
@@ -18,21 +17,7 @@ module Hydra::Admin::Collections::Metadata
     property :creator, predicate: RDF::DC.creator do |index|
       index.as :stored_searchable, :facetable
     end
-   
-    
 
-    # contains 'descMetadata', predicate: ActiveFedora::SimpleDatastream do |sds|
-    #   sds.field :name, :string
-    #   sds.field :description, :string
-    #   sds.field :publisher, :string
-    #   sds.field :type, :string
-    #   sds.field :language, :string
-    #   sds.field :coverage, :string
-    #   sds.field :creator, :string
-    # end
-
-    # has_attributes :description, :name, :publisher, :type, :language, :coverage, datastream: :descMetadata, multiple: false
-    # has_attributes :creator, datastream: :descMetadata, multiple: true
   end
 end
 
