@@ -2,7 +2,7 @@ module Hydra::Admin::Collections::Metadata
   extend ActiveSupport::Concern
   included do
      # In place of :name?
-    property :name, predicate: RDF::DC.name, multiple: false do |index|
+    property :title, predicate: RDF::DC.title, multiple: false do |index|
       index.as :stored_searchable
     end
     property :description, predicate: RDF::DC.description, multiple: false do |index|
