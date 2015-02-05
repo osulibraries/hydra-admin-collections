@@ -38,9 +38,9 @@ describe Hydra::Admin::Collection do
     expect(subject.read_groups).to eq ["public"]
   end
 
-  it "should have a title" do
-    subject.title = "A Collection of Art"
-    expect(subject.title).to eq "A Collection of Art"
+  it "should have a name" do
+    subject.name = "A Collection of Art"
+    expect(subject.name).to eq "A Collection of Art"
   end
 
   it "should have a description" do
@@ -53,20 +53,20 @@ describe Hydra::Admin::Collection do
     expect(subject.publisher).to eq "Kelvin Smith Library, Cleveland, Ohio"
   end
 
-  # it "should have a type" do
-  #   subject.type = "multimedia"
-  #   expect(subject.type).to eq "multimedia"
-  # end
+  it "should have a type" do
+    subject.type = "multimedia"
+    expect(subject.type).to eq "multimedia"
+  end
 
   it "should have a language" do
     subject.language = "eng"
     expect(subject.language).to eq "eng"
   end
 
-  # it "should have a coverage" do
-  #   subject.coverage = "Cleveland, Ohio"
-  #   expect(subject.coverage).to eq "Cleveland, Ohio"
-  # end
+  it "should have a coverage" do
+    subject.coverage = "Cleveland, Ohio"
+    expect(subject.coverage).to eq "Cleveland, Ohio"
+  end
 
   it "should have creator" do
     subject.creator = ['frank', 'sarah']
