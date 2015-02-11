@@ -6,7 +6,7 @@ module Hydra::Admin::Collections
     # @option args [String] :class_name ('Hydra::Admin::Collection') the class of the collection itself 
     # @option args [Symbol] :predicate (:is_member_of_collection) the symbol that points at the RDF predicate to use 
     def belongs_to_admin_collection(args={})
-      belongs_to args.fetch(:name, :collection), class_name: args.fetch(:class_name, 'Hydra::Admin::Collection'), predicate: args.fetch(:predicate, ActiveFedora::RDF::Fcrepo::RelsExt.isMemberOfCollection)
+      belongs_to args.fetch(:name, :collection), class_name: args.fetch(:class_name, 'Hydra::Admin::Collection'), predicate: args.fetch(:predicate, ActiveFedora::RDF::Fcrepo::RelsExt.isPartOf)
     end
   end
 end
