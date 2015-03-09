@@ -1,6 +1,6 @@
 module Hydra::Admin::Collections::Metadata
-  # extend ActiveSupport::Concern
-  # included do
+  extend ActiveSupport::Concern
+  included do
     # has_metadata 'descMetadata', type: ActiveFedora::SimpleDatastream do |sds|
     #   sds.field :name, :string
     #   sds.field :description, :string
@@ -30,6 +30,6 @@ module Hydra::Admin::Collections::Metadata
     
     # has_attributes :description, :name, :publisher, :type, :language, :coverage, datastream: :descMetadata, multiple: false
     # has_attributes :creator, datastream: :descMetadata, multiple: true
-  # end
+  end
 end
 
